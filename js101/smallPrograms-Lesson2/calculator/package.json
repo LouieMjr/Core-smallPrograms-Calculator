@@ -12,7 +12,7 @@
 	"description": "",
 	"dependencies": {
 		"readline-sync": "^1.4.10"
-	}
+	},
 	"devDependencies": {
     "babel-eslint": "^10.1.0",
     "eslint": "^7.12.1",
