@@ -1,5 +1,5 @@
 {
-	"name": "js101-smallprograms",
+	"name": "js101",
 	"version": "1.0.0",
 	"main": "calculator.js",
 	"scripts": {
@@ -13,4 +13,9 @@
 	"dependencies": {
 		"readline-sync": "^1.4.10"
 	}
+	"devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.12.1",
+    "eslint-cli": "^1.1.1"
+  }
 }

@@ -1,4 +1,4 @@
-import messageObj from './calculatorMessages.json' assert {type: 'json'};
+import messageObj from '../calculatorMessages.json' assert {type: 'json'};
 import readline from "readline-sync";
 const ask = readline.question;
 
@@ -10,7 +10,7 @@ const invalidNumber = (number) => number.trimStart() === '' || Number.isNaN(Numb
 
 function checkForValidNumber(number) {
   while (invalidNumber(number)) {
-    prompt(messageObj.notValidNum);
+    prompt(messageObj.invalidNum);
     number = ask();
   }
   return number;
