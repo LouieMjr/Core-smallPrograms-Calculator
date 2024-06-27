@@ -1,3 +1,4 @@
+import messageObj from './calculatorMessages.json' assert {type: 'json'};
 import readline from "readline-sync";
 const ask = readline.question;
 
@@ -9,7 +10,7 @@ const invalidNumber = (number) => number.trimStart() === '' || Number.isNaN(Numb
 
 function checkForValidNumber(number) {
   while (invalidNumber(number)) {
-    prompt('This isnt a number. Enter a valid number!');
+    prompt(messageObj.notValidNum);
     number = ask();
   }
   return number;
@@ -18,7 +19,7 @@ function checkForValidNumber(number) {
 function checkForValidOperation(string) {
   const validStrings = ['1', '2', '3', '4'];
   while (!validStrings.includes(string)) {
-    prompt('Must choose 1, 2, 3, or 4');
+    prompt(messageObj.chooseValidString);
     string = ask();
   }
   return string;
@@ -44,19 +45,19 @@ function performOperationAndEvaluate(operation, num1, num2) {
 }
 
 function promptForNumbersAndOperation() {
-  prompt("What's the first number?");
+  prompt(messageObj.firstNum);
   let number1 = ask();
 
   number1 = checkForValidNumber(number1);
   number1 = Number(number1);
 
-  prompt("What's the second number?");
+  prompt(messageObj.secondNum);
   let number2 = ask();
 
   number2 = checkForValidNumber(number2);
   number2 = Number(number2);
 
-  prompt("What operation would you like to perform on these numbers? \n1) Add 2) Subtract 3) Multiply 4) Divide");
+  prompt(messageObj.operation);
   let operation = ask();
   operation = checkForValidOperation(operation);
 
@@ -65,11 +66,11 @@ function promptForNumbersAndOperation() {
 }
 
 function restartCal() {
-  prompt('Do you want to perform another calculation? Enter Y or N');
+  prompt(messageObj.restart);
   const result = ask();
   if (result[0].toUpperCase() === 'Y') return promptForNumbersAndOperation();
-  return 'No more calculations for now. Rest!';
+  return messageObj.finish;
 }
 
-prompt("Welcome to Calculator!");
+prompt(messageObj.greet);
 console.log(promptForNumbersAndOperation());

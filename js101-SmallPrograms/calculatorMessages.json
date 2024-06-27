@@ -1,0 +1,11 @@
+{
+  "firstNum": "What's the first number?",
+  "secondNum": "What's the second number?",
+  "notValidNum": "This isnt a number. Enter a valid number!",
+  "chooseValidString": "Must choose 1, 2, 3, or 4!",
+  "restart": "Do you want to perform another calculation? Enter Y or N",
+  "greet": "Welcome to Calculator!",
+  "finish": "No more calculations for now. Rest!",
+  "operation": "What operation would you like to perform on these numbers? \n1) Add 2) Subtract 3) Multiply 4) Divide"
+
+}
