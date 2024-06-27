@@ -75,7 +75,7 @@ function validLanguage() {
   prompt(messageObj.language)
   let language = ask();
   language = language.toLowerCase();
-  
+
   const validStrings = ['en', 'es', 'fr', 'de', 'ja', 'ar']
   
   while (!validStrings.includes(language)) {
