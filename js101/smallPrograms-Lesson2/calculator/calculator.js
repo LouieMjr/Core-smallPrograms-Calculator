@@ -71,6 +71,7 @@ function restartCalc() {
   if (result[0].toUpperCase() === 'Y') return promptForNumbersAndOperation();
   return messageObj[language].finish;
 }
+
 function validLanguage() {
   prompt(messageObj.language)
   let language = ask();
