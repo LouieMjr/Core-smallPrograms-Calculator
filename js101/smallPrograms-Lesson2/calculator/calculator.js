@@ -60,7 +60,7 @@ function getOperation() {
   return operation;
 }
 
-function promptForNumbersAndOperation() {
+function runCalculator() {
   prompt(messageObj[language].askForFirstNum);
   let isNumberValid = false;
   const firstNumber = getNumber(isNumberValid);
@@ -80,7 +80,7 @@ function restartCalc() {
   prompt(messageObj[language].restart);
   const result = ask();
   console.clear();
-  if (result.toUpperCase() === 'Y' || result.toUpperCase() === 'YES') return promptForNumbersAndOperation();
+  if (result.toUpperCase() === 'Y' || result.toUpperCase() === 'YES') return runCalculator();
   return messageObj[language].finish;
 }
 
@@ -89,7 +89,7 @@ function validLanguage() {
   let language = ask();
   language = language.toLowerCase();
 
-  const validStrings = ['en', 'es', 'fr', 'de', 'ja', 'ar']
+  const validStrings = ['en', 'es', 'fr', 'de', 'ja', 'ar'];
   
   while (!validStrings.includes(language)) {
     prompt(messageObj.en.chooseValidLanguage);
@@ -97,8 +97,8 @@ function validLanguage() {
     language = language.toLowerCase();
   }
   return language;
-};
+}
 
 prompt(messageObj.en.greet);
 const language = validLanguage();
-console.log(promptForNumbersAndOperation());
+console.log(runCalculator());
