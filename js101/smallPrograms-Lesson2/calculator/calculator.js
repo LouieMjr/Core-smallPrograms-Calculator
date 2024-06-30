@@ -8,11 +8,15 @@ function prompt(message) {
 
 const invalidNumber = (number) => number.trimStart() === '' || Number.isNaN(Number(number));
 
-function checkForValidNumber(number) {
+function checkForValidNumber(number, booleanValue) {
+  const promptForNumber = booleanValue ? messageObj[language].secondNum : messageObj[language].firstNum;
   while (invalidNumber(number)) {
-    prompt(messageObj[language].invalidNum);
-    number = ask();
+      console.clear();
+      prompt(messageObj[language].invalidNum);
+      prompt(promptForNumber);
+      number = ask();
   }
+  console.clear();
   return number;
 }
 
@@ -46,22 +50,24 @@ function performOperationAndEvaluate(operation, num1, num2) {
 
 function promptForNumbersAndOperation() {
   prompt(messageObj[language].firstNum);
-  let number1 = ask();
+  let firstNumber = ask();
 
-  number1 = checkForValidNumber(number1);
-  number1 = Number(number1);
+  let isFirstNumValid = false;
+  firstNumber = checkForValidNumber(firstNumber, isFirstNumValid);
+  isFirstNumValid = true;
+  firstNumber = Number(firstNumber);
 
   prompt(messageObj[language].secondNum);
-  let number2 = ask();
+  let secondNumber = ask();
 
-  number2 = checkForValidNumber(number2);
-  number2 = Number(number2);
+  secondNumber = checkForValidNumber(secondNumber, isFirstNumValid);
+  secondNumber = Number(secondNumber);
 
   prompt(messageObj[language].operation);
   let operation = ask();
   operation = checkForValidOperation(operation);
 
-  console.log(performOperationAndEvaluate(operation, number1, number2));
+  console.log(performOperationAndEvaluate(operation, firstNumber, secondNumber));
   return restartCalc();
 }
 
