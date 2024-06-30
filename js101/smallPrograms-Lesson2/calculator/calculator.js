@@ -48,20 +48,20 @@ function performOperationAndEvaluate(operation, num1, num2) {
   return output;
 }
 
+function getNumber(boolean) {
+  let number = ask();
+  number = checkForValidNumber(number, boolean);
+  return Number(number);
+};
+
 function promptForNumbersAndOperation() {
   prompt(messageObj[language].askForFirstNum);
-  let firstNumber = ask();
-
-  let isFirstNumValid = false;
-  firstNumber = checkForValidNumber(firstNumber, isFirstNumValid);
-  isFirstNumValid = true;
-  firstNumber = Number(firstNumber);
+  let isNumberValid = false;
+  const firstNumber = getNumber(isNumberValid);
+  isNumberValid = true;
 
   prompt(messageObj[language].askForSecondNum);
-  let secondNumber = ask();
-
-  secondNumber = checkForValidNumber(secondNumber, isFirstNumValid);
-  secondNumber = Number(secondNumber);
+  const secondNumber = getNumber(isNumberValid);
 
   prompt(messageObj[language].operation);
   let operation = ask();
