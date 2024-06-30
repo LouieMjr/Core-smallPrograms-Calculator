@@ -52,7 +52,13 @@ function getNumber(boolean) {
   let number = ask();
   number = checkForValidNumber(number, boolean);
   return Number(number);
-};
+}
+
+function getOperation() {
+  let operation = ask();
+  operation = checkForValidOperation(operation);
+  return operation;
+}
 
 function promptForNumbersAndOperation() {
   prompt(messageObj[language].askForFirstNum);
@@ -64,8 +70,7 @@ function promptForNumbersAndOperation() {
   const secondNumber = getNumber(isNumberValid);
 
   prompt(messageObj[language].operation);
-  let operation = ask();
-  operation = checkForValidOperation(operation);
+  const operation = getOperation();
 
   console.log(performOperationAndEvaluate(operation, firstNumber, secondNumber));
   return restartCalc();
