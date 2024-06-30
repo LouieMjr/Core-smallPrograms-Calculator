@@ -9,7 +9,7 @@ function prompt(message) {
 const invalidNumber = (number) => number.trimStart() === '' || Number.isNaN(Number(number));
 
 function checkForValidNumber(number, booleanValue) {
-  const promptForNumber = booleanValue ? messageObj[language].secondNum : messageObj[language].firstNum;
+  const promptForNumber = booleanValue ? messageObj[language].askForSecondNum : messageObj[language].askForFirstNum;
   while (invalidNumber(number)) {
       console.clear();
       prompt(messageObj[language].invalidNum);
@@ -34,22 +34,22 @@ function performOperationAndEvaluate(operation, num1, num2) {
   switch (operation) {
     case '1':
       output = num1 + num2;
-      break;
+      return `The results of ${num1} + ${num2} = ${output}`
     case '2':
       output = num1 - num2;
-      break;
+      return `The results of ${num1} - ${num2} = ${output}`
     case '3':
       output = num1 * num2;
-      break;
+      return `The results of ${num1} * ${num2} = ${output}`
     case '4':
       output = num1 / num2;
-      break;
+      return `The results of ${num1} / ${num2} = ${output}`
   }
   return output;
 }
 
 function promptForNumbersAndOperation() {
-  prompt(messageObj[language].firstNum);
+  prompt(messageObj[language].askForFirstNum);
   let firstNumber = ask();
 
   let isFirstNumValid = false;
@@ -57,7 +57,7 @@ function promptForNumbersAndOperation() {
   isFirstNumValid = true;
   firstNumber = Number(firstNumber);
 
-  prompt(messageObj[language].secondNum);
+  prompt(messageObj[language].askForSecondNum);
   let secondNumber = ask();
 
   secondNumber = checkForValidNumber(secondNumber, isFirstNumValid);
@@ -74,7 +74,8 @@ function promptForNumbersAndOperation() {
 function restartCalc() {
   prompt(messageObj[language].restart);
   const result = ask();
-  if (result[0].toUpperCase() === 'Y') return promptForNumbersAndOperation();
+  console.clear();
+  if (result.toUpperCase() === 'Y' || result.toUpperCase() === 'YES') return promptForNumbersAndOperation();
   return messageObj[language].finish;
 }
 

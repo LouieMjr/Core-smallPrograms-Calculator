@@ -1,8 +1,8 @@
 {
   "language": "What language would you like to use? \n=> Pick 'en' for English, 'es' for Spanish, 'fr' for French, 'de' for German, 'ja' for Japanese or 'ar' for Arabic",
   "en": {
-    "firstNum": "What's the first number?",
-    "secondNum": "What's the second number?",
+    "askForFirstNum": "What's the first number?",
+    "askForSecondNum": "What's the second number?",
     "invalidNum": "This isnt a number. Enter a valid number!",
     "chooseValidNum": "Must choose 1, 2, 3, or 4!",
     "chooseValidLanguage": "Invalid Language. Must choose en, es, fr, de, ja, or ar!",
@@ -12,8 +12,8 @@
     "operation": "What operation would you like to perform on these numbers? \n1) Add 2) Subtract 3) Multiply 4) Divide"
   },
   "es": {
-    "firstNum": "¿Cuál es el primer número?",
-    "secondNum": "¿Cuál es el segundo número?",
+    "askForFirstNum": "¿Cuál es el primer número?",
+    "askForSecondNum": "¿Cuál es el segundo número?",
     "invalidNum": "Esto no es un número. ¡Introduce un número válido!",
     "chooseValidNum": "¡Debes elegir 1, 2, 3 o 4!",
     "restart": "¿Quieres realizar otro cálculo? Introduce S o N",
@@ -22,8 +22,8 @@
     "operation": "¿Qué operación te gustaría realizar con estos números? \n1) Sumar 2) Restar 3) Multiplicar 4) Dividir"
   },
   "fr": {
-    "firstNum": "Quel est le premier nombre?",
-    "secondNum": "Quel est le deuxième nombre?",
+    "askForFirstNum": "Quel est le premier nombre?",
+    "askForSecondNum": "Quel est le deuxième nombre?",
     "invalidNum": "Ce n'est pas un nombre. Entrez un nombre valide!",
     "chooseValidNum": "Vous devez choisir 1, 2, 3 ou 4!",
     "restart": "Voulez-vous effectuer un autre calcul? Entrez O ou N",
@@ -32,8 +32,8 @@
     "operation": "Quelle opération souhaitez-vous effectuer sur ces nombres? \n1) Ajouter 2) Soustraire 3) Multiplier 4) Diviser"
   },
   "de": {
-    "firstNum": "Was ist die erste Zahl?",
-    "secondNum": "Was ist die zweite Zahl?",
+    "askForFirstNum": "Was ist die erste Zahl?",
+    "askForSecondNum": "Was ist die zweite Zahl?",
     "invalidNum": "Das ist keine Zahl. Bitte geben Sie eine gültige Zahl ein!",
     "chooseValidNum": "Sie müssen 1, 2, 3 oder 4 wählen!",
     "restart": "Möchten Sie eine weitere Berechnung durchführen? Geben Sie J oder N ein",
@@ -42,8 +42,8 @@
     "operation": "Welche Operation möchten Sie mit diesen Zahlen durchführen? \n1) Addieren 2) Subtrahieren 3) Multiplizieren 4) Dividieren"
   },
   "ja": {
-    "firstNum": "最初の数字は何ですか?",
-    "secondNum": "二番目の数字は何ですか?",
+    "askForFirstNum": "最初の数字は何ですか?",
+    "askForSecondNum": "二番目の数字は何ですか?",
     "invalidNum": "これは数字ではありません。有効な数字を入力してください!",
     "chooseValidNum": "1、2、3、または4を選択する必要があります！",
     "restart": "もう一度計算を行いますか? YまたはNを入力してください",
@@ -52,8 +52,8 @@
     "operation": "これらの数字でどの操作を行いますか? \n1) 足し算 2) 引き算 3) 掛け算 4) 割り算"
   },
   "ar": {
-    "firstNum": "ما هو الرقم الأول؟",
-    "secondNum": "ما هو الرقم الثاني؟",
+    "askForFirstNum": "ما هو الرقم الأول؟",
+    "askForSecondNum": "ما هو الرقم الثاني؟",
     "invalidNum": "هذا ليس رقمًا. أدخل رقمًا صالحًا!",
     "chooseValidNum": "يجب اختيار 1 أو 2 أو 3 أو 4!",
     "restart": "هل تريد إجراء عملية حسابية أخرى؟ أدخل Y أو N",
