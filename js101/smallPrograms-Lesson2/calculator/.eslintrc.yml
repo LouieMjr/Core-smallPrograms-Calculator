@@ -1,15 +1,12 @@
 # Last update: 04 Dec 2023
 root: true
 parser: babel-eslint
-parserOptions: {
-    "requireConfigFile": false,
-    "babelOptions": {
-      "plugins": [
-        "@babel/plugin-syntax-import-attributes",
-        "@babel/plugin-syntax-import-assertions"
-      ]
-    }
-  }
+parserOptions:
+  requireConfigFile: false
+  babelOptions:
+    plugins:
+      - "@babel/plugin-syntax-import-attributes"
+      - "@babel/plugin-syntax-import-assertions"
   ecmaFeatures:
     impliedStrict: true
 env:
