@@ -3,7 +3,7 @@
   "en": {
     "askForFirstNum": "What's the first number?",
     "askForSecondNum": "What's the second number?",
-    "invalidNum": "This isnt a number. Enter a valid number!",
+    "invalidNum": "This isn't a number. Enter a valid number!",
     "chooseValidNum": "Must choose 1, 2, 3, or 4!",
     "chooseValidLanguage": "Invalid Language. Must choose en, es, fr, de, ja, or ar!",
     "restart": "Do you want to perform another calculation? Enter Y or N",
